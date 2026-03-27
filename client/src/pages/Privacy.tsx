@@ -100,9 +100,12 @@ export default function Privacy() {
             <p style={{ fontFamily: "'Inter'", fontSize: "0.85rem", color: "#8b8a9e" }}>
               <span style={{ color: "#7c5cbf", fontWeight: 600 }}>Effective Date:</span> March 26, 2026
             </p>
-            <p style={{ fontFamily: "'Inter'", fontSize: "0.85rem", color: "#8b8a9e" }}>
-              <span style={{ color: "#7c5cbf", fontWeight: 600 }}>Last Updated:</span> March 26, 2026
-            </p>
+      <p style={{ fontFamily: "'Inter'", fontSize: "0.85rem", color: "#8b8a9e" }}>
+            <span style={{ color: "#7c5cbf", fontWeight: 600 }}>Last Updated:</span> March 26, 2026
+          </p>
+          <p style={{ fontFamily: "'Inter'", fontSize: "0.85rem", color: "#8b8a9e", marginTop: "0.5rem" }}>
+            <span style={{ color: "#7c5cbf", fontWeight: 600 }}>URL:</span> https://systems.aeona.app/privacy
+          </p>
           </div>
         </div>
       </section>
