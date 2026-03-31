@@ -20,39 +20,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
-
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
         with:
           version: 10
-
       - name: Install dependencies
         run: pnpm install
-
       - name: Build
         run: pnpm run build
-
-      - name: Add .htaccess for SPA routing
-        run: |
-          cat > dist/public/.htaccess << 'EOF'
-          Options -MultiViews
-          RewriteEngine On
-          RewriteCond %{REQUEST_FILENAME} !-f
-          RewriteCond %{REQUEST_FILENAME} !-d
-          RewriteRule ^ index.html [QSA,L]
-          EOF
-
-      - name: Add 404.html for SPA routing on GitHub Pages
+      - name: Add 404.html for SPA routing
         run: cp dist/public/index.html dist/public/404.html
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
